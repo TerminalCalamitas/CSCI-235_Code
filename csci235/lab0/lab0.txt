@@ -1,0 +1,6 @@
+driver: cknapp
+a. pwd prints out the directory you are currently located in
+b. lists all files in the current directory, even those prefixed by a period
+c. cd changes directories to the one specified, if one isn't provided, changes directory to your home directory
+d. rm removes the specified file
+e. .. represents the directory above the current one 
