@@ -1,0 +1,5 @@
+driver: cknapp
+navigator: awillis4
+
+resize_attempt.c from point A to point B is trying to resize the array to be bigger than it originally was and copies all the old values to the new array. Finally it changes the pointer to point at the new array.
+If you compile and run resize_attempt.c without any command line arguments then it gives you a segmentation fault. The code automatically checks the value of argv[1] on line 13, and since it doesn't exist the code crashes.
