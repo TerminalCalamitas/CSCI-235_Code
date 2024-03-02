@@ -17,7 +17,7 @@ int main() {
 	printf("Enter a value to be deleted:\n");
 
 	getint(intInput);
-	delete_node(list, *intInput);
+	list = delete_node(list, *intInput);
 	print_list(list);
 	list = free_list(list);
 	print_list(list);

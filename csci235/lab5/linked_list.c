@@ -32,6 +32,7 @@ Node* free_list(Node *p) {
 }
 
 Node* delete_node(Node* p, int value) {
+	Node* temp = p;
 	if (p -> value == value) {
 		p-> value = p->next->value;
 		p->next = p->next->next;
@@ -39,11 +40,16 @@ Node* delete_node(Node* p, int value) {
 	}
 	while(p->next != NULL) {
 		if(p->next->value == value) {
-			p->next = p->next->next;
+		    	if (p->next->next != NULL) {
+			    p->next = p->next->next;
+			} else {
+			    p->next = NULL;
+			    break;
+			}
 		}
 		p = p -> next;
 	}
-	return p;
+	return temp;
 }
 /*
 int main() {
